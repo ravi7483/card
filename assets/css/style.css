@@ -1,0 +1,57 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.imgcard{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+}
+.mycard{
+    position: relative;
+    margin: 0;
+}
+
+.id, .albumId {
+    top: 5px;
+    position: absolute;
+    color: white;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+.id{
+    left: 5px;
+}
+.albumId {
+    right: 28px;
+}
+.title{
+    top:0;
+    left :0;
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+   /*  opacity: 0;*/  
+   transform: scale(0);  
+   transition: all .3s ease-in-out;
+}
+.title  span{
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    color: white;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 10px;
+    line-height: 1;
+    text-align: center;
+}
+.mycard:hover .id, 
+.mycard:hover .albumId{
+    opacity: 1;
+}
+.mycard:hover .title{
+    transform: scale(1);
+}
